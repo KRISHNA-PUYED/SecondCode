@@ -1,0 +1,197 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML PlayGround - Code Editor</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+  </head>
+
+  <body>
+
+    <div class="flex-container">
+
+      <div class="flex-item-1">
+
+        <nav class="navbar">
+
+          <ul>
+              <li class="titleNav">
+             
+                <a id="current_date" style='color:black; font-size: 20px;'></a>
+           
+            
+           
+                <a id="time" style='color:black; font-size:20px;'>Time</a>
+             
+            <!--  <a style='font-size:40px;'>&#128187;</a>
+             <a style='font-size:40px;'>&#128187;</a>
+             <a style='font-size:40px;'>&#10084;</a>-->  
+            
+  <!-- <a href="#" class="titleNavLink"> CODING CAMP </a>--> 
+           
+   
+
+             <!--  <a style='font-size:40px;'>&#128187;</a>
+                <a style='font-size:40px;'>&#128187;</a>--> 
+              
+              </li> 
+             
+             
+           
+          <span class="ariahidden"></span>  
+           
+  <!--       <a href="#" class="titleNavLink"> CODING CAMP </a>   --> 
+            <p class="titleNavLink">CODIND CAMP</p>
+      <!--      <a id="name" style='color:black; font-size:20px;'>&#128187</a>   -->
+
+           <span class="ariahidden"></span> 
+      
+          <li class="navitem optionsNav">  
+           
+              <a href="#" class="optionsNavLink">OPTIONS &#9656;</a>
+              <ul>
+                <li style="display: none;"><a href="#">Save Code Locally</a></li>
+                <li><a href="#" id="chTheme" onclick="changeTheme()">Switch Theme</a></li>
+              <li><a id="btn1">HTML</a>  
+                <li><a id="btn3">CSS</a>
+                  <li><a id="btn4">JAVASCRIPT</a>
+                    <li><a id="btn2">Online_Compiler</a>
+                    <li><a id="btn5">CPP_Compiler</a>
+                     <li><a id="btn6">JAVA_Compiler</a>  
+                 <!--     <li><a id="btn8">Login</a>   -->  
+                       
+                     
+                </li>
+              </ul>
+            </li>  
+            
+          </ul>
+          
+          <a href="#" class="hbmNavIcon" onclick="navToggle()">&#9776;</a>
+         
+        </nav>
+        
+      <div class="heading">
+<ul>
+  <div class="hea">
+        <li class="navitem active" onclick="toggle(this,0)">
+          <a href="#" class="htmlNavLink" style="font-size:25px;">HTML</a>
+          
+        </li>
+        <li class="navitem" onclick="toggle(this,1)">
+          <a href="#" class="cssNavLink" style="font-size:25px;">CSS</a>
+        </li>
+        <li class="navitem" onclick="toggle(this,2)">
+          <a href="#" class="jsNavLink" style="font-size:25px;">JAVASCRIPT</a>
+        </li>
+       
+      </div>
+      </ul>
+   
+    </div>
+
+      </div>
+      <div class="flex-item-2 bigscreen">
+        <div id="htmlEditor" class="editor fi-2-column-1 con">
+          
+</div>
+
+        <div id="cssEditor" class="editor fi-2-column-2 con">
+</div>
+        <div id="jsEditor" class="editor fi-2-column-3 con">
+</div>
+    
+      </div>
+    </div>
+    <div class="file">
+    <input id="filename1" placeholder="HTML Filename..."/>
+    <button id="download1">Download file</button>
+    <input id="filename1" placeholder="CSS Filename..." />
+    <button id="download1">Download file</button>
+    <input id="filename1" placeholder="JAVASCRIPT Filename..." />
+    <button id="download1">Download file</button>
+    </div>
+<div class="out">
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#" id="btn7">Quiz_App</a>
+   
+    <a id="btn9">HTML_PDF</a>
+    
+    
+    <button onClick = "MyAudio()" id="au"> Play Music </button>   
+    
+</div>
+    <!-- Use any element to open the sidenav -->
+   
+    <span onclick="openNav()"><img src="https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png" width="40px" style="padding-top: 5px; padding-left: 10px;"></span>
+   
+     
+  
+<div class="outdata">
+  <p>OUTPUT</p>
+</div>
+    
+    <select id="sel">
+      <option name="hed1" id="hh1">*All HTML Tag*</option>
+      <option name="h1" id="hh1">1.<-H1->Large Heading Tag<-/H1-></option>
+      <option name="B1" id="hh1">2.<-B->-Bold Text<-/B-></option>
+      <option name="U1"id="hh1">3.<-U->-Underline Text<-/U-></option>
+      <option name="I1"id="hh1">4.<-I->-Italic Text<-/I-></option>
+      <option name="P1"id="hh1">5.<-P->-Paragraph Tag<-/P-></option>
+      <option name="HR1"id="hh1">6.<-HR->-Horizontal Line<-/HR-></option>
+      <option name="BR1"id="hh1">7.<-BR->-Break the line<-/BR-></option>
+      <option name="sup1"id="hh1">8.<-SUP->-Super Script Tag<-/SUP-></option>
+      <option name="sub1"id="hh1">9.<-SUB->-Sub Script Tag<-/SUB-></option>
+      <option name="mar1"id="hh1">10.<-MARQUEE->-Marquee Tag<-/MARQUEE-></option>
+      <option name="pre1"id="hh1">11.<-PRE->-Pre-Formating Tag<-/PRE-></option>
+      <option name="DIV1"id="hh1">12.<-DIV->-Divided Pages<-/DIV-></option>
+      <option name="SPAN1"id="hh1">13.<-SPAN-Divided Large pages into small section<-/SPAN-></option>
+      <option name="Add1"id="hh1">14.<-ADDRESS->-Address Tag<-/ADDRESS-></option>
+      <option name="fon1"id="hh1">15.<-Font->-Font Tag<-/FONT-></option>
+      <option name="img1"id="hh1">16.<-IMG SRC="path"->-Image Tag<-/IMG-></option>
+      <option name="A1"id="hh1">17.<-A->-Anchor Tag<-/A-></option>
+      <option name="TAB1"id="hh1">18.<-TABLE->- Table Tag<-/TABLE-></option>
+      <option name="TAB2" id="hh1">19.<-TR->- Table Row Tag<-/TR-></option>
+      <option name="TAB3"id="hh1">20.<-TH->- Table Heading Tag<-/TH-></option>
+      <option name="TAB4"id="hh1">21.<-TD->- Table Data Tag<-/TD-></option>
+      <option name="CAP1"id="hh1">22.<-CAPTION->- Caption Tag<-/CAPTION-></option>
+      <option name="FRA1"id="hh1">23.<-FRAMESET ROW="Values"->- Divided Frame Row Format<-/FRAESET-></option>
+      <option name="FRA2"id="hh1">24.<-FRAMESET COLS="Values"->- Divided Frame Coloum Format<-/FRAMESET-></option>
+      <option name="FRA"id="hh1">25.<-FRAMES SRC="Img Path"->- Add Frame in Divided Block<-/FRAMES-></option>
+      <option name="FOR1"id="hh1">26.<-FORM->-Collect input data and store Systemetic way<-/FORM-></option>
+      <option name="TAREA"id="hh1">27.<-TEXTAREA>-Multiple Line Text<-/TEXTAREA-></option>
+      
+      </select>
+</div>
+    <iframe id="ifrResult" class="output"></iframe>
+
+  <footer>
+    <h1><a href="#" class="fa fa-laptop">MGM'S COLLEGE CS & IT NANDED  <a href="#" class="fa fa-laptop"></a></h1>
+    <div class="logo">
+      <a href="#" class="fa fa-facebook"></a>
+      <a href="#" class="fa fa-google"></a>
+      <a href="#" class="fa fa-instagram"></a>
+      <a href="#" class="fa fa-youtube"></a>
+     
+    </div>
+  </footer>
+  <audio src = "C:\Users\Nucleus Computers\Music\Video Projects\Rahogi-Meri-Arijit-Singh.mp3" id = "Audio"> </audio>
+
+  
+	<script type="text/javascript" src="./main.js"></script>
+	<script type="text/javascript" src="./ace/ace.js"></script>
+	<script type="text/javascript" src="./ace/mode-css.js"></script>
+	<script type="text/javascript" src="./ace/mode-javascript.js"></script>
+	<script type="text/javascript" src="./ace/mode-html.js"></script>
+	<script type="text/javascript" src="./ace/worker-css.js"></script>
+	<script type="text/javascript" src="./ace/worker-javascript.js"></script>
+	<script type="text/javascript" src="./ace/worker-html.js"></script>
+	<script type="text/javascript" src="./ace/theme-crimson_editor.js"></script>
+	<script type="text/javascript" src="./ace/theme-monokai.js"></script>
+  </body>
+</html>
